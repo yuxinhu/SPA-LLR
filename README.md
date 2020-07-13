@@ -9,8 +9,6 @@ To solve the non-linear model, alternating minimization is used. Thank [Dr. Fran
 
 ### Usage
 
-The example data include a multi-direction multi-shot multi-channel k-space data, correpsonding sensitivity maps (the same for different directions here), the SENSE reconstruction results for initialization (we provide here for simplicit of the code, it is simply based on SENSE. Please check our paper for details). 
-
 Starting from the raw data, there are several steps as below.
 
 Step 1: Extract k-space data (demo_readP.m). Here we provide a modifed Orchestra function(in Matlab, SDK 1.7-1) which load k-space data and perform ramp sampling and EPI phase correction with the Pfile, vrgf and ref files as input. The main function named "EpiDiffusionRecon_yuxin" is based on the original function "EpiDiffusionRecon" in Orchestra. The strategy is pretty similar what we did for modifying Orchestra for online shot-LLR reconstruction: add code to save k-space data after some post-processing step, except this is in Matlab. Notice that we are saving each direction data as one individual file (k1.mat, k2.mat, k3.mat, ...). For different scanner version, it may start from k1.mat or k2.mat. You probably need to change the name to make sure the following reconstruction load the data approporiately. 
