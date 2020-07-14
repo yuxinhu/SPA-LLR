@@ -26,7 +26,7 @@ By running our scripts on the given data, you should be able to get the followin
 
 <div align="center">
   <img = src="Results.png" width=“300px” />
-  <p>Example output using 6 different directions.</p>
+  <p>Example output using 6 different directions. This may be a bad example since there are some artifacts due to fat supprestion, while it is good enough to show this whole pipeline works. </p>
 </div>
 
 ### Notes
