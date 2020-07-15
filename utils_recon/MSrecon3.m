@@ -51,7 +51,7 @@ switch method
         end
         imc = im_ice;
 
-    case 'CLEAR'
+    case 'LLR'
         im_llr = zeros(nx,ny,nshot,nex);
         sens = permute(sens,[1 2 4 3]);
         for n = 1 : nex
@@ -66,7 +66,7 @@ switch method
             eval(comm);
         end
         imc = im_llr(:,:,:,:);
-    case 'CLEAR-VCS'
+    case 'LLR-VCS'
         im_llr = zeros(nx,ny,2*nshot,nex);
 
         sens2 = repmat(sens(:,:,:,1),[1 1 1 nshot]);
